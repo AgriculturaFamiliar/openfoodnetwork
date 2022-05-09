@@ -144,29 +144,15 @@ module Spree
       "#{self.class.name};#{id}"
     end
 
-    def disabled?
+    def disabled
       disabled_at.present?
     end
 
-    def disable!
-      self.disabled_at = Time.zone.now
-      save!
-    end
-
-    def enable!
-      self.disabled_at = nil
-      save!
-    end
-
-    def toggle_disable
-      disabled?
-    end
-
-    def toggle_disable=(value)
+    def disabled=(value)
       if value == '1'
-        disable!
+        self.disabled_at = Time.zone.now
       else
-        enable!
+        self.disabled_at = nil
       end
     end
 

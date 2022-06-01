@@ -357,7 +357,7 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (4.2.1)
       railties (>= 3.2.16)
-    json (2.6.1)
+    json (1.8.6)
     json-schema (2.8.1)
       addressable (>= 2.4)
     json_spec (1.1.5)
@@ -433,6 +433,7 @@ GEM
       ruby-rc4
       ttfunk
     pg (1.2.3)
+    phonelib (0.6.58)
     power_assert (2.0.1)
     pry (0.13.1)
       coderay (~> 1.1)
@@ -771,6 +772,7 @@ DEPENDENCIES
   paypal-sdk-merchant (= 1.117.2)
   pdf-reader
   pg (~> 1.2.3)
+  phonelib
   pry (~> 0.13.0)
   pry-byebug (~> 3.9.0)
   puma

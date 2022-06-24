@@ -532,4 +532,8 @@ class Enterprise < ApplicationRecord
       where('enterprises.id != ?', id).
       update_all(updated_at: Time.zone.now)
   end
+
+  def diego
+    'DididiDiego'
+  end
 end

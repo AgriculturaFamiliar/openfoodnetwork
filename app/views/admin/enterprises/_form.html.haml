@@ -61,3 +61,7 @@
 %fieldset.alpha.no-border-bottom{ ng: { if: "menu.selected.name=='tag_rules'" } }
   %legend {{menu.selected.label}}
   = render 'admin/enterprises/form/tag_rules', f: f
+
+%fieldset.alpha.no-border-bottom
+  %legend {{menu.selected.label}}
+  = render 'admin/enterprises/form/diego', f: f

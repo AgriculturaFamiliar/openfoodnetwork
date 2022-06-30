@@ -101,6 +101,7 @@ class Enterprise < ApplicationRecord
   validate :shopfront_producers
   validate :enforce_ownership_limit, if: lambda { owner_id_changed? && !owner_id.nil? }
   validates :phone, phone: { allow_blank: true, country_specifier: ->(instance) { instance.address.country.iso } }, unless: lambda { address.nil? }
+  validates :whatsapp_phone, phone: { allow_blank: true, country_specifier: ->(instance) { instance.address.country.iso } }, unless: lambda { address.nil? }
 
   before_validation :initialize_permalink, if: lambda { permalink.nil? }
   before_validation :set_unused_address_fields

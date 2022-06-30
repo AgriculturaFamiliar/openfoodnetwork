@@ -456,7 +456,7 @@ class Enterprise < ApplicationRecord
   end
 
   def correct_whatsapp_url(phone_number)
-    phone_number && "https://wa.me/" + phone_number.tr('+ ', '')
+    phone_number && "https://wa.me/" + Phonelib.parse(phone_number, address.country.iso).international(false).to_s.delete("+")
   end
 
   def correct_instagram_url(url)
